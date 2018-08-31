@@ -1,0 +1,11 @@
+C:\Users\sferry\source\dB_Manager\dB_Manager\bin\Debug\ExcelDBtoSS.exe.config
+C:\Users\sferry\source\dB_Manager\dB_Manager\bin\Debug\ExcelDBtoSS.exe
+C:\Users\sferry\source\dB_Manager\dB_Manager\bin\Debug\ExcelDBtoSS.pdb
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\dB_Manager.csprojAssemblyReference.cache
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\dB_Manager.csproj.ResolveComReference.cache
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\ExcelDBtoSS.frmMain.resources
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\ExcelDBtoSS.Properties.Resources.resources
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\dB_Manager.csproj.GenerateResource.cache
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\dB_Manager.csproj.CoreCompileInputs.cache
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\ExcelDBtoSS.exe
+C:\Users\sferry\source\dB_Manager\dB_Manager\obj\Debug\ExcelDBtoSS.pdb

@@ -1,0 +1,10 @@
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\bin\Debug\ExcelDBtoSS.exe.config
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\bin\Debug\ExcelDBtoSS.exe
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\bin\Debug\ExcelDBtoSS.pdb
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\obj\Debug\ExcelDBtoSS.csprojAssemblyReference.cache
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\obj\Debug\ExcelDBtoSS.Properties.Resources.resources
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\obj\Debug\ExcelDBtoSS.csproj.GenerateResource.cache
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\obj\Debug\ExcelDBtoSS.csproj.CoreCompileInputs.cache
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\obj\Debug\ExcelDBtoSS.exe
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\obj\Debug\ExcelDBtoSS.pdb
+C:\Users\sferry\source\ExcelDBtoSS\ExcelDBtoSS\obj\Debug\ExcelDBtoSS.frmMain.resources
