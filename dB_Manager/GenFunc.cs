@@ -46,7 +46,11 @@ namespace GenFunc
             Marshal.ReleaseComObject(p_WB);
             Marshal.ReleaseComObject(p_App);
         }
+    }
 
+    public static class xlDB
+    {
+        
     }
 
 }
