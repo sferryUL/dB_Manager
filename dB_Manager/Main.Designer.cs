@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.txtDB = new System.Windows.Forms.TextBox();
@@ -90,6 +90,7 @@
             this.btnDefBrowse = new System.Windows.Forms.Button();
             this.txtDefFile = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnDefCmp = new System.Windows.Forms.Button();
             this.grpImpList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.grpUserAuth.SuspendLayout();
@@ -209,9 +210,9 @@
             // 
             // dgvList_cmRegAddr
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList_cmRegAddr.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList_cmRegAddr.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvList_cmRegAddr.HeaderText = "Register Address";
             this.dgvList_cmRegAddr.Name = "dgvList_cmRegAddr";
             this.dgvList_cmRegAddr.ReadOnly = true;
@@ -220,10 +221,10 @@
             // 
             // dgvList_cmParamNum
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList_cmParamNum.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList_cmParamNum.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvList_cmParamNum.HeaderText = "Parameter Number";
             this.dgvList_cmParamNum.Name = "dgvList_cmParamNum";
             this.dgvList_cmParamNum.ReadOnly = true;
@@ -233,8 +234,8 @@
             // dgvList_cmParamName
             // 
             this.dgvList_cmParamName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList_cmParamName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList_cmParamName.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvList_cmParamName.HeaderText = "Parameter Name";
             this.dgvList_cmParamName.Name = "dgvList_cmParamName";
             this.dgvList_cmParamName.ReadOnly = true;
@@ -242,9 +243,9 @@
             // 
             // dgvList_cmMult
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList_cmMult.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList_cmMult.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvList_cmMult.HeaderText = "Multiplier";
             this.dgvList_cmMult.Name = "dgvList_cmMult";
             this.dgvList_cmMult.ReadOnly = true;
@@ -253,9 +254,9 @@
             // 
             // dgvList_cmBase
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList_cmBase.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList_cmBase.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvList_cmBase.HeaderText = "Number Base";
             this.dgvList_cmBase.Name = "dgvList_cmBase";
             this.dgvList_cmBase.ReadOnly = true;
@@ -264,9 +265,9 @@
             // 
             // dgvList_cmUnits
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList_cmUnits.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList_cmUnits.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvList_cmUnits.HeaderText = "Value Units";
             this.dgvList_cmUnits.Name = "dgvList_cmUnits";
             this.dgvList_cmUnits.ReadOnly = true;
@@ -445,13 +446,14 @@
             this.grpDefVals.Enabled = false;
             this.grpDefVals.Location = new System.Drawing.Point(12, 405);
             this.grpDefVals.Name = "grpDefVals";
-            this.grpDefVals.Size = new System.Drawing.Size(725, 299);
+            this.grpDefVals.Size = new System.Drawing.Size(725, 323);
             this.grpDefVals.TabIndex = 10;
             this.grpDefVals.TabStop = false;
             this.grpDefVals.Text = "Drive Default Parameter Value Import";
             // 
             // grpDefTools
             // 
+            this.grpDefTools.Controls.Add(this.btnDefCmp);
             this.grpDefTools.Controls.Add(this.btnDefImp);
             this.grpDefTools.Controls.Add(this.btnDefColCfg);
             this.grpDefTools.Controls.Add(this.label8);
@@ -465,24 +467,24 @@
             this.grpDefTools.Enabled = false;
             this.grpDefTools.Location = new System.Drawing.Point(6, 204);
             this.grpDefTools.Name = "grpDefTools";
-            this.grpDefTools.Size = new System.Drawing.Size(713, 89);
+            this.grpDefTools.Size = new System.Drawing.Size(713, 112);
             this.grpDefTools.TabIndex = 26;
             this.grpDefTools.TabStop = false;
             this.grpDefTools.Text = "Database Tools:";
             // 
             // btnDefImp
             // 
-            this.btnDefImp.Location = new System.Drawing.Point(592, 47);
+            this.btnDefImp.Location = new System.Drawing.Point(12, 83);
             this.btnDefImp.Name = "btnDefImp";
-            this.btnDefImp.Size = new System.Drawing.Size(115, 23);
+            this.btnDefImp.Size = new System.Drawing.Size(130, 23);
             this.btnDefImp.TabIndex = 27;
-            this.btnDefImp.Text = "Import List Data";
+            this.btnDefImp.Text = "Import Default Data";
             this.btnDefImp.UseVisualStyleBackColor = true;
             this.btnDefImp.Click += new System.EventHandler(this.btnDefImp_Click);
             // 
             // btnDefColCfg
             // 
-            this.btnDefColCfg.Location = new System.Drawing.Point(467, 47);
+            this.btnDefColCfg.Location = new System.Drawing.Point(458, 47);
             this.btnDefColCfg.Name = "btnDefColCfg";
             this.btnDefColCfg.Size = new System.Drawing.Size(115, 23);
             this.btnDefColCfg.TabIndex = 26;
@@ -584,9 +586,9 @@
             // 
             // dgvDefVal_cmRegAddr
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDefVal_cmRegAddr.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDefVal_cmRegAddr.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvDefVal_cmRegAddr.HeaderText = "Register Address";
             this.dgvDefVal_cmRegAddr.Name = "dgvDefVal_cmRegAddr";
             this.dgvDefVal_cmRegAddr.ReadOnly = true;
@@ -595,10 +597,10 @@
             // 
             // dgvDefVal_cmParamNum
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDefVal_cmParamNum.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDefVal_cmParamNum.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgvDefVal_cmParamNum.HeaderText = "Parameter Number";
             this.dgvDefVal_cmParamNum.Name = "dgvDefVal_cmParamNum";
             this.dgvDefVal_cmParamNum.ReadOnly = true;
@@ -608,8 +610,8 @@
             // dgvDefVal_cmParamName
             // 
             this.dgvDefVal_cmParamName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDefVal_cmParamName.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDefVal_cmParamName.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvDefVal_cmParamName.HeaderText = "Parameter Name";
             this.dgvDefVal_cmParamName.Name = "dgvDefVal_cmParamName";
             this.dgvDefVal_cmParamName.ReadOnly = true;
@@ -656,6 +658,16 @@
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "Excel File:";
+            // 
+            // btnDefCmp
+            // 
+            this.btnDefCmp.Location = new System.Drawing.Point(148, 83);
+            this.btnDefCmp.Name = "btnDefCmp";
+            this.btnDefCmp.Size = new System.Drawing.Size(130, 23);
+            this.btnDefCmp.TabIndex = 27;
+            this.btnDefCmp.Text = "Compare Default Data";
+            this.btnDefCmp.UseVisualStyleBackColor = true;
+            this.btnDefCmp.Click += new System.EventHandler(this.btnDefCmp_Click);
             // 
             // frmMain
             // 
@@ -746,6 +758,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDefVal_cmParamNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDefVal_cmParamName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDefVal_cmDefVal;
+        private System.Windows.Forms.Button btnDefCmp;
     }
 }
 

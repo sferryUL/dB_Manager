@@ -18,6 +18,7 @@ namespace ExcelDBtoSS
     public partial class frmMain : Form
     {
         #region Globals
+
         const string conn_str_start = "Server = {0};Database = {1}; Integrated Security = {2};";
         const string conn_str_usr = "User ID = {0};Password = {1};";
 
@@ -25,6 +26,12 @@ namespace ExcelDBtoSS
         XL._Workbook xlWB;
         XL._Worksheet xlWS;
         XL.Range xlRng;
+
+        string ListFileFull;
+        string ListFileSafe;
+
+        string DefFileSafe;
+        string DefFileFull;
 
         List<Drv_List_Data> DrvParmData;
         List<Drv_List_Data> DrvDefData;
@@ -144,7 +151,7 @@ namespace ExcelDBtoSS
             try
             {
                 xlApp = new XL.Application();
-                xlWB = xlApp.Workbooks.Open(txtListFile.Text);
+                xlWB = xlApp.Workbooks.Open(ListFileFull);
                 xlWS = xlWB.Worksheets[1];
                 xlRng = xlWS.UsedRange;
             }
@@ -274,6 +281,7 @@ namespace ExcelDBtoSS
         #endregion
 
         #region Default Value Import Functions
+
         private void btnDefOpen_Click(object sender, EventArgs e)
         {
             if(txtDefFile.Text == "")
@@ -365,6 +373,43 @@ namespace ExcelDBtoSS
 
             GetDriveList();
             GetTableList(cmbDefTblList);
+            cmbDefTblList.SelectedIndex = 2;
+
+            // Try to select the correct drive
+            string drive = DefFileSafe.Substring(0, DefFileSafe.IndexOf('_'));
+            int idx_drive = -1;
+            for(int i=0;i<DrvInfo.Count;i++)
+            {
+                if(drive.Equals(DrvInfo[i].PartNum))
+                {
+                    idx_drive = i;
+                    break;
+                }
+            }
+
+            if(idx_drive >= 0)
+                cmbDefDrive.SelectedIndex = idx_drive;
+
+            // Try to select the correct duty rating of the drive
+            int idx_duty = -1;
+            string duty = DefFileSafe.Substring(DefFileSafe.IndexOf('_') + 1, 2);
+            switch(duty)
+            {
+                case "HD":
+                    idx_duty = 0;
+                    break;
+                case "ND":
+                    idx_duty = 1;
+                    break;
+            }
+
+            if(idx_duty >= 0)
+                cmbDefDuty.SelectedIndex = idx_duty;
+
+            // if both drive ID and duty rating have been determined setup the column name
+            if((idx_duty >= 0) && (idx_drive >= 0))
+                btnDefColCfg_Click(sender, e);
+
             grpDefTools.Enabled = true;
         } // btnDefOpen_Click
 
@@ -406,9 +451,58 @@ namespace ExcelDBtoSS
                 string val = DrvDefData[i].DefVal.ToString();
                 string param = DrvDefData[i].ParamNum;
                 string sql = string.Format("UPDATE {0} SET {1} = {2} WHERE PARAM_NUM = '{3}'", tbl, col, val, param);
-                SqlCommand cmd = new SqlCommand(sql, dBConn);
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    SqlCommand cmd = new SqlCommand(sql, dBConn);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MsgBox.Err("Error updating database!\n" + ex.Message, "Database Error!");
+                    return;
+                }
             }
+            col = "";
+
+            MsgBox.Info("Database update successful!");
+        }
+
+        private void btnDefCmp_Click(object sender, EventArgs e)
+        {
+            if(DrvDefData.Count == 0)
+            {
+                MsgBox.Err("No data to compare!");
+                return;
+            }
+
+            if(txtDefCol.Text == "")
+            {
+                MsgBox.Err("Database table column not configured!");
+                return;
+            }
+
+            string tbl = cmbDefTblList.Text;
+            string col = txtDefCol.Text;
+            int mis_cnt = 0;
+
+            for(int i=0;i<DrvDefData.Count;i++)
+            {
+                string sql = string.Format("SELECT {0} FROM {1} WHERE PARAM_NUM = '{2}'", col, tbl, DrvDefData[i].ParamNum);
+                SqlCommand cmd = new SqlCommand(sql, dBConn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while(dr.Read())
+                {
+                    if(Convert.ToInt32(dr[col]) != DrvDefData[i].DefVal)
+                        mis_cnt++;
+                }
+                dr.Close();
+            }
+
+            if(mis_cnt > 0)
+                MsgBox.Err("Comparison error! There were a total of " + mis_cnt.ToString() + " mismatched default values", "Comparison Error");
+            else
+                MsgBox.Info("Comparison complete, all parameters matched the database records!");
+                
         }
 
         #endregion
@@ -428,10 +522,14 @@ namespace ExcelDBtoSS
                 switch(btn.Name)
                 {
                     case "btnListFileBrowse":
-                        txtListFile.Text = opfd.FileName;
+                        ListFileFull = opfd.FileName;
+                        txtListFile.Text = ListFileFull;
+                        ListFileSafe = opfd.SafeFileName;
                         break;
                     case "btnDefBrowse":
-                        txtDefFile.Text = opfd.FileName;
+                        DefFileFull = opfd.FileName;
+                        txtDefFile.Text = DefFileFull;
+                        DefFileSafe = opfd.SafeFileName;
                         break;
                 }
 
@@ -442,7 +540,7 @@ namespace ExcelDBtoSS
         #region List Acquisition Functions
         private void GetTableList(ComboBox p_Combobox)
         {
-            string sql = "SELECT TABLE_NAME FROM ElectricalApps.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'";
+            string sql = "SELECT TABLE_NAME FROM ElectricalApps.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' ORDER BY TABLE_NAME ASC";
             SqlCommand cmd = new SqlCommand(sql, dBConn);
             SqlDataReader dr = cmd.ExecuteReader();
             while(dr.Read())
@@ -480,6 +578,7 @@ namespace ExcelDBtoSS
         }
         #endregion
 
+        
     } // class frmMain
 
     public class Drv_Info
